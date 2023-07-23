@@ -3,7 +3,7 @@
  * @type {Object}
  */
 const config = {
-	"base_path": "/dino3d/",
+	"base_path": "/ChromeDino3D/",
 	"logs": true,
 	"debug": false,
 	"camera": {
