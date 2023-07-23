@@ -7,7 +7,7 @@ load_manager.set_loader('cactus', ['ground'], function() {
 
   for(let i = 0; i <= cactusFiles.length - 1; i++) {
     // load all cactuses
-    parser.parse(config.base_path + 'objects/cactus/' + cactusFiles[i] + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/cactus/' + cactusFiles[i] + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .09});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);

@@ -5,7 +5,7 @@ load_manager.set_loader('t_ground', [], function() {
 	};
 	let loaded_textures = 0;
 
-	loader.load(config.base_path + 'textures/ground_top.png', function ( texture ) {
+	loader.load('https://pages.klash.dev/ChromeDino3D/' + 'textures/ground_top.png', function ( texture ) {
 		texture.magFilter = THREE.NearestFilter;
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;

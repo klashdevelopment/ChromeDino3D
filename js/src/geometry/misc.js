@@ -12,7 +12,7 @@ load_manager.set_loader('misc', ['ground'], function() {
 
   for(let i = 0; i < miscItems.length; i++) {
     // load all flowers
-    parser.parse(config.base_path + 'objects/misc/' + miscItems[i] + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/misc/' + miscItems[i] + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);

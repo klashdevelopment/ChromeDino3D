@@ -5,7 +5,7 @@
 
 class AudioManager {
     constructor() {
-      this.base_path = config.base_path + 'sound/';
+      this.base_path = 'https://pages.klash.dev/ChromeDino3D/' + 'sound/';
       this.sounds = {
         "score": new Howl({
           src: [this.base_path + 'Pickup_Coin103.wav'],

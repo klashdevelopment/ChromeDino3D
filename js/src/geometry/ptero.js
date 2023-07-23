@@ -5,7 +5,7 @@ load_manager.set_loader('ptero', ['ground','cactus'], function() {
 
   for(let i = 0; i <= framesCount; i++) {
     // load all .vox frames
-    parser.parse(config.base_path + 'objects/ptero/' + i + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/ptero/' + i + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);

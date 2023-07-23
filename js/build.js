@@ -121,7 +121,7 @@
 
 class AudioManager {
     constructor() {
-      this.base_path = config.base_path + 'sound/';
+      this.base_path = 'https://pages.klash.dev/ChromeDino3D/' + 'sound/';
       this.sounds = {
         "score": new Howl({
           src: [this.base_path + 'Pickup_Coin103.wav'],
@@ -2302,7 +2302,7 @@ let load_manager = new LoadManager(); // start loading assets ASAP
 load_manager.set_loader('ground', [], function() {
   let parser = new vox.Parser();
 
-  parser.parse(config.base_path + 'objects/ground sand.vox').then(function(voxelData) {
+  parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/ground sand.vox').then(function(voxelData) {
     let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
     let material = new THREE.MeshLambertMaterial();
     material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2315,7 +2315,7 @@ load_manager.set_loader('ground', [], function() {
 load_manager.set_loader('ground_bg', [], function() {
   let parser = new vox.Parser();
 
-  parser.parse(config.base_path + 'objects/ground sand solid.vox').then(function(voxelData) {
+  parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/ground sand solid.vox').then(function(voxelData) {
     let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
     let material = new THREE.MeshLambertMaterial();
     material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2332,7 +2332,7 @@ load_manager.set_loader('dyno', ['ground'], function() {
 
   for(let i = 0; i <= framesCount; i++) {
     // load all .vox frames
-    parser.parse(config.base_path + 'objects/t-rex/' + i + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/t-rex/' + i + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2360,7 +2360,7 @@ load_manager.set_loader('dyno_band', ['dyno'], function() {
 
   for(let i = 0; i <= framesCount; i++) {
     // load all .vox frames
-    parser.parse(config.base_path + 'objects/t-rex/band/' + i + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/t-rex/band/' + i + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2393,7 +2393,7 @@ load_manager.set_loader('dyno_death', ['ground'], function() {
 
   for(let i = 0; i < framesItems.length; i++) {
     // load all flowers
-    parser.parse(config.base_path + 'objects/t-rex/other/' + framesItems[i] + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/t-rex/other/' + framesItems[i] + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2423,7 +2423,7 @@ load_manager.set_loader('cactus', ['ground'], function() {
 
   for(let i = 0; i <= cactusFiles.length - 1; i++) {
     // load all cactuses
-    parser.parse(config.base_path + 'objects/cactus/' + cactusFiles[i] + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/cactus/' + cactusFiles[i] + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .09});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2445,7 +2445,7 @@ load_manager.set_loader('ptero', ['ground','cactus'], function() {
 
   for(let i = 0; i <= framesCount; i++) {
     // load all .vox frames
-    parser.parse(config.base_path + 'objects/ptero/' + i + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/ptero/' + i + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2469,7 +2469,7 @@ load_manager.set_loader('rocks', ['ground'], function() {
 
   for(let i = 0; i <= rocksCount; i++) {
     // load all rocks
-    parser.parse(config.base_path + 'objects/rocks/' + i + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/rocks/' + i + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2492,7 +2492,7 @@ load_manager.set_loader('flowers', ['ground'], function() {
 
   for(let i = 0; i <= flowersCount; i++) {
     // load all flowers
-    parser.parse(config.base_path + 'objects/flowers/' + i + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/flowers/' + i + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2521,7 +2521,7 @@ load_manager.set_loader('misc', ['ground'], function() {
 
   for(let i = 0; i < miscItems.length; i++) {
     // load all flowers
-    parser.parse(config.base_path + 'objects/misc/' + miscItems[i] + '.vox').then(function(voxelData) {
+    parser.parse('https://pages.klash.dev/ChromeDino3D/' + 'objects/misc/' + miscItems[i] + '.vox').then(function(voxelData) {
       let builder = new vox.MeshBuilder(voxelData, {voxelSize: .1});
       let material = new THREE.MeshLambertMaterial();
       material.map = vox.MeshBuilder.textureFactory.getTexture(voxelData);
@@ -2545,7 +2545,7 @@ load_manager.set_loader('t_ground', [], function() {
 	};
 	let loaded_textures = 0;
 
-	loader.load(config.base_path + 'textures/ground_top.png', function ( texture ) {
+	loader.load('https://pages.klash.dev/ChromeDino3D/' + 'textures/ground_top.png', function ( texture ) {
 		texture.magFilter = THREE.NearestFilter;
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
